@@ -38,7 +38,7 @@ public class LombokTest {
     }
 
     public static void main(String[] args) throws FileNotFoundException {
-        @Cleanup FileInputStream file = new FileInputStream("file");//通过@Cleanup，在使用完后自动关闭清理
+//        @Cleanup FileInputStream file = new FileInputStream("file");//通过@Cleanup，在使用完后自动关闭清理
         val t = new String();//在声明前不指定类型，声明后才指定类型
         LombokTest lombokTest = new LombokTest(1, "", "");
         LombokTest build = LombokTest.builder().id(1).username("").password("").build();//通过构造者模式创建对象
