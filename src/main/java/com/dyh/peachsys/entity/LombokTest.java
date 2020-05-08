@@ -1,9 +1,10 @@
 package com.dyh.peachsys.entity;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.*;
 import lombok.extern.java.Log;
 
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
 /**
@@ -24,10 +25,13 @@ import java.io.FileNotFoundException;
 @Data//集成前面的注解
 @Builder//构造者模式
 @Log//日志，支持全部的日志组件
+@ApiModel("lombok测试实体类")
 public class LombokTest {
     //    @Getter(AccessLevel.PRIVATE)//通过AccessLevel指定方法级别
+    @ApiModelProperty("编号")
     private Integer id;
 //    @NonNull
+    @ApiModelProperty("用户名")
     private String username;
 //    @Setter(AccessLevel.NONE)
     private String password;

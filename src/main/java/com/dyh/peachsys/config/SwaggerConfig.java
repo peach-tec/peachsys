@@ -1,5 +1,6 @@
 package com.dyh.peachsys.config;
 
+import io.swagger.annotations.ApiModelProperty;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -39,6 +40,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())//文档信息
                 .enable(flag)//是否启用swagger，true启动，false不启用，在发布时选择false
+                .groupName("華")//分组，如果需要多个分组，创建多个Bean
                 .select()
 //                .apis(RequestHandlerSelectors.basePackage(""))//指定要扫描的包
 //                .apis(RequestHandlerSelectors.any())//扫描全部
@@ -47,6 +49,28 @@ public class SwaggerConfig {
                 .apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class))//扫描方法上的注解
                 .paths(PathSelectors.any())//过滤
                 .build();
+    }
+
+    /**
+     * 新增分组测试
+     */
+    @Bean
+    public Docket docket1() {
+        return new Docket(DocumentationType.SWAGGER_2)
+                .groupName("A")
+                .select()
+                .apis(RequestHandlerSelectors.withMethodAnnotation(ApiModelProperty.class))
+                .paths(PathSelectors.any()).build();
+    }
+
+    @Bean
+    public Docket docket2() {
+        return new Docket(DocumentationType.SWAGGER_2).groupName("B");
+    }
+
+    @Bean
+    public Docket docket3() {
+        return new Docket(DocumentationType.SWAGGER_2).groupName("C");
     }
 
     /**
