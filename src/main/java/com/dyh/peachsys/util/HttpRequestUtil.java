@@ -1,7 +1,8 @@
-package com.dyh.peachsys.common;
+package com.dyh.peachsys.util;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.dyh.peachsys.common.RequestCommon;
 import com.dyh.peachsys.dto.ProductDto;
 import io.swagger.annotations.Api;
 import org.apache.http.HttpEntity;
@@ -25,7 +26,7 @@ import java.util.List;
  * @address 成都
  */
 @Api(tags = "网络请求工具包")
-public class HttpRequest {
+public class HttpRequestUtil {
     public static JSONArray httpRequest() {
         CloseableHttpClient httpClient = HttpClientBuilder.create().build();
         HttpGet httpGet = new HttpGet(RequestCommon.url);
