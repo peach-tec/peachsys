@@ -8,6 +8,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * @author Peach-華
  * @version V1.0
@@ -19,7 +21,7 @@ import lombok.Data;
 @Data
 @ApiModel(value = "用户表")
 @TableName(value = "user")//表格注解，指定数据库表格
-public class User {
+public class User implements Serializable {
     @ApiModelProperty(value = "主键id")
     @TableId(value = "id", type = IdType.AUTO)//主键注解，指定主键
     private Integer id;

@@ -4,7 +4,10 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.dyh.peachsys.entity.User;
 import com.dyh.peachsys.mapper.UserMapper;
 import com.dyh.peachsys.service.IUserService;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * @author Peach-華
@@ -16,4 +19,9 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class UserService extends ServiceImpl<UserMapper, User> implements IUserService {
+    @Override
+    @Cacheable(value = "user")
+    public List<User> getAll() {
+        return baseMapper.selectList(null);
+    }
 }

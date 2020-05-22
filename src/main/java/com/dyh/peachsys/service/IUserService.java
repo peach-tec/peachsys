@@ -3,6 +3,8 @@ package com.dyh.peachsys.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.dyh.peachsys.entity.User;
 
+import java.util.List;
+
 /**
  * @author Peach-華
  * @version V1.0
@@ -12,5 +14,5 @@ import com.dyh.peachsys.entity.User;
  * @address 成都
  */
 public interface IUserService extends IService<User> {
-
+    List<User> getAll();
 }
