@@ -6,7 +6,9 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
@@ -21,6 +23,8 @@ import java.io.Serializable;
 @Data
 @ApiModel(value = "用户表")
 @TableName(value = "user")//表格注解，指定数据库表格
+@AllArgsConstructor
+@NoArgsConstructor
 public class User implements Serializable {
     @ApiModelProperty(value = "主键id")
     @TableId(value = "id", type = IdType.AUTO)//主键注解，指定主键
