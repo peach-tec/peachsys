@@ -6,7 +6,7 @@
     "imageCompressEnable": true,
     "imageCompressBorder": 1600,
     "imageInsertAlign": "none",
-    "imageUrlPrefix": "http://localhost:8080/",
+    "imageUrlPrefix": "http://peachsys.tpddns.cn:8080",
     "imagePathFormat": "/image/{yyyy}{mm}{dd}/{time}{rand:6}",
 
     "scrawlActionName": "uploadscrawl",
@@ -32,7 +32,7 @@
     "videoActionName": "uploadvideo",
     "videoFieldName": "upfile",
     "videoPathFormat": "/video/{yyyy}{mm}{dd}/{time}{rand:6}",
-    "videoUrlPrefix": "",
+    "videoUrlPrefix": "http://peachsys.tpddns.cn:8080",
     "videoMaxSize": 102400000,
     "videoAllowFiles": [
         ".flv", ".swf", ".mkv", ".avi", ".rm", ".rmvb", ".mpeg", ".mpg",

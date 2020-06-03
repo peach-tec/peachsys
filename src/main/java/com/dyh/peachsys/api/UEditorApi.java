@@ -47,7 +47,6 @@ public class UEditorApi {
         request.setCharacterEncoding("utf-8");
         response.setContentType("application/json");
         //获取config.json的路径
-        String rootPath = "src/main/resources/static";
         if ("config".equals(action)) {
             //将config.json放在resources根目录下，用io流来读取
             //因为在导成jar包部署后获取不到config.json的路径

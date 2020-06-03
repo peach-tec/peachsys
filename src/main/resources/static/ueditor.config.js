@@ -30,8 +30,8 @@
         UEDITOR_HOME_URL: URL
 
         // 服务器统一请求接口路径
-        // , serverUrl: "http://localhost:8080/config"
-        , serverUrl: "http://localhost:9000/zkbc/config"
+         , serverUrl: "http://peachsys.tpddns.cn:8080/config"
+        //, serverUrl: "http://peachsys.tpddns.cn:9000/zkbc/config"
 
         //工具栏上的所有的功能按钮和下拉框，可以在new编辑器的实例时选择自己需要的重新定义
         , toolbars: [[
