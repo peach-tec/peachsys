@@ -1,4 +1,4 @@
-package com.dyh.udp;
+package com.dyh.udpdemo;
 
 import java.io.IOException;
 import java.net.DatagramPacket;

@@ -1,4 +1,4 @@
-package com.dyh.thred;
+package com.dyh.threddemo;
 
 import org.apache.commons.io.FileUtils;
 

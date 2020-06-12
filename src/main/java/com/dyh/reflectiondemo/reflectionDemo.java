@@ -1,4 +1,4 @@
-package com.dyh.reflection;
+package com.dyh.reflectiondemo;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
