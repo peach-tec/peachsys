@@ -18,11 +18,11 @@
     <properties>
         <java.version>1.8</java.version>
         <swagger.version>2.9.2</swagger.version>
-        <mybatis.version>2.1.2</mybatis.version>
         <mybatisplus.version>3.3.1</mybatisplus.version>
         <fastjson.version>1.2.68</fastjson.version>
         <redis.version>2.3.0.RELEASE</redis.version>
         <ueditor.version>1.4.3.3</ueditor.version>
+        <mybatis.version>3.5.5</mybatis.version>
     </properties>
 
     <dependencies>
@@ -50,13 +50,6 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
-        <!-- mybatis -->
-        <!--        <dependency>-->
-        <!--            <groupId>org.mybatis.spring.boot</groupId>-->
-        <!--            <artifactId>mybatis-spring-boot-starter</artifactId>-->
-        <!--            <version>${mybatis.version}</version>-->
-        <!--        </dependency>-->
-        <!-- Mybatis-plus -->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
@@ -120,6 +113,19 @@
         <!--            <version>1.1.2</version>-->
         <!--        </dependency>-->
 
+        <!-- mybatis-spring boot ,下面两个都可使用，但是上面这个jar包支持在properties文件中配置mybatis-->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>2.1.3</version>
+        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.mybatis</groupId>-->
+<!--            <artifactId>mybatis</artifactId>-->
+<!--            <version>${mybatis.version}</version>-->
+<!--        </dependency>-->
+
+
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -152,6 +158,26 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
+
+        <!-- 能在java目录下写配置文件 -->
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.properties</include>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>true</filtering>
+            </resource>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.properties</include>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
     </build>
 
 </project>

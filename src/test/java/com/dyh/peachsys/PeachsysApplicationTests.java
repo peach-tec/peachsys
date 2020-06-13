@@ -1,19 +1,17 @@
 package com.dyh.peachsys;
 
-import com.dyh.peachsys.entity.User;
-import com.dyh.peachsys.service.IUserService;
-import com.dyh.peachsys.util.RedisUtil;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.dyh.peachsys.peach.entity.User;
+import com.dyh.peachsys.peach.service.IUserService;
+import com.dyh.peachsys.peach.util.RedisUtil;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.RedisTemplate;
 
 import java.util.List;
 
 @SpringBootTest
-class PeachsysApplicationTests {
+public class PeachsysApplicationTests {
 
     /**
      * redis模板对象
@@ -28,7 +26,7 @@ class PeachsysApplicationTests {
     private RedisUtil redisUtil;
 
     @Test
-    public void getUser(){
+    public void getUser() {
         /**
          * 通过注解的方式
          */
@@ -36,7 +34,7 @@ class PeachsysApplicationTests {
         List<User> all = userService.getAll();
         long end = System.currentTimeMillis();
 
-        System.out.println(end-start);
+        System.out.println(end - start);
     }
 
     @Test

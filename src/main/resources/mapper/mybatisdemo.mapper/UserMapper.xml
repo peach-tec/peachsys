@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--通过namespace绑定mapper接口-->
+<mapper namespace="com.dyh.peachsys.mybatisdemo.mapper.MybatisUserMapper">
+    <!-- 查询语句，id绑定接口中的方法,resultType返回的结果类型对象 -->
+    <select id="getList" resultType="MybatisUser">
+        select * from `user`
+    </select>
+
+    <select id="getUser" parameterType="int" resultType="MybatisUser">
+        select * from `user` where `id` = #{id}
+    </select>
+
+    <insert id="addUser" parameterType="MybatisUser">
+        insert into user (`name`,`age`,`email`) values(#{name},#{age},#{email})
+    </insert>
+
+    <update id="updateUser">
+        update user set email = #{email} where id = #{id}
+    </update>
+
+    <delete id="deleteUser">
+        delete from user where id = #{id}
+    </delete>
+
+    <insert id="addUser2" parameterType="map">
+        insert into user (`name`,`age`,`email`) values(#{name},#{age},#{email})
+    </insert>
+</mapper>
