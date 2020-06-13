@@ -36,3 +36,6 @@ build/
 /src/main/resources/database.properties
 /src/main/resources/config.properties
 /src/main/resources/config.properties
+/mvnw.cmd
+/mvnw
+/.mvn

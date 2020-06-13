@@ -2,8 +2,16 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!--通过namespace绑定mapper接口-->
 <mapper namespace="com.dyh.peachsys.mybatisdemo.mapper.MybatisUserMapper">
+    <!-- 结果集映射 -->
+    <resultMap id="UserMap" type="MybatisUser">
+        <result column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="age" property="age"/>
+        <result column="email" property="email"/>
+    </resultMap>
+
     <!-- 查询语句，id绑定接口中的方法,resultType返回的结果类型对象 -->
-    <select id="getList" resultType="MybatisUser">
+    <select id="getList" resultMap="UserMap">
         select * from `user`
     </select>
 

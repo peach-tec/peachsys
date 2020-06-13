@@ -23,6 +23,7 @@
         <redis.version>2.3.0.RELEASE</redis.version>
         <ueditor.version>1.4.3.3</ueditor.version>
         <mybatis.version>3.5.5</mybatis.version>
+        <log4j.version>1.2.17</log4j.version>
     </properties>
 
     <dependencies>
@@ -124,6 +125,19 @@
 <!--            <artifactId>mybatis</artifactId>-->
 <!--            <version>${mybatis.version}</version>-->
 <!--        </dependency>-->
+
+        <!-- 日志记录 -->
+<!--        <dependency>-->
+<!--            <groupId>log4j</groupId>-->
+<!--            <artifactId>log4j</artifactId>-->
+<!--            <version>${log4j.version}</version>-->
+<!--        </dependency>-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-log4j2</artifactId>
+        </dependency>
+
+
 
 
 
