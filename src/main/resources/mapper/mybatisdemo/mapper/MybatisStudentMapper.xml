@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dyh.peachsys.mybatisdemo.mapper.MybatisStudentMapper">
+    <!--
+        多对一查询：子查询
+        查询素有学生信息
+        根据查询出来的学生的tid查询教师
+    -->
+    <select id="getStudentList" resultMap="StudentTeacher">
+        select * from student;
+    </select>
+    <resultMap id="StudentTeacher" type="MybatisStudent">
+        <result property="id" column="id"/>
+        <result property="name" column="name"/>
+        <!-- 映射对象属性 -->
+        <association property="teacher" column="tid" javaType="MybatisTeacher" select="getTeacher"/>
+    </resultMap>
+    <select id="getTeacher" resultType="MybatisTeacher">
+        select * from teacher where id = #{tid}
+    </select>
+
+    <!--
+        多对一查询：按照查询结构进行嵌套
+    -->
+    <select id="getStudentList2" resultMap="StudentTeacher2">
+        select s.id sid, s.name sname,t.id tid,t.name tname from student s, teacher t where s.tid = t.id
+    </select>
+    <resultMap id="StudentTeacher2" type="MybatisStudent">
+        <result property="id" column="sid"/>
+        <result property="name" column="sname"/>
+        <!-- 映射对象属性 -->
+        <association property="teacher" javaType="MybatisTeacher">
+            <result property="name" column="tname"/>
+            <result property="id" column="tid"/>
+        </association>
+    </resultMap>
+
+</mapper>
