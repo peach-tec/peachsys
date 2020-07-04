@@ -31,7 +31,7 @@ public class Res<T> {
         Res<T> res = new Res<>();
         res.setData(data);
         res.setInfo("OK");
-        res.setStatus(200);
+        res.setStatus(0);
         return res;
     }
 
