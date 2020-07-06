@@ -1,0 +1,54 @@
+# spring boot 配置类
+
+# 指定配置环境
+spring:
+  profiles:
+    active: dev
+#    数据库配置，其余配置请自己补全
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      initial-size: 10
+      min-idle: 100
+      max-active: 1000
+      max-wait: 60000
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 20
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      web-stat-filter:
+        enabled: true
+      # 监控
+      stat-view-servlet:
+          enabled: true
+          url-pattern: /druid/*
+          allow:
+          deny:
+          login-username: admin
+          login-password: admin
+      filter:
+        stat:
+          log-slow-sql: true
+          slow-sql-millis: 1000
+          merge-sql: false
+          enabled: true
+        wall:
+          config:
+            multi-statement-allow: true
+# 端口
+server:
+  port: 8080
+
+# mybatisplus 相关配置
+mybatis-plus:
+  # 扫描xml文件
+  mapper-locations: classpath*:mapper/mybatisdemo/mapper/*.xml
+  # 实体类
+  type-aliases-package: com.dyh.peachsys.*.entity
+  configuration:
+    # 驼峰命名
+    map-underscore-to-camel-case: true

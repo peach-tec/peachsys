@@ -30,7 +30,7 @@ build/
 ### VS Code ###
 .vscode/
 /src/main/resources/params.properties
-/peachsys.sql
+/data/peachsys.sql
 /src/main/resources/application-dev.properties
 /src/main/resources/application-pro.properties
 /src/main/resources/database.properties
@@ -39,3 +39,7 @@ build/
 /mvnw.cmd
 /mvnw
 /.mvn
+/src/main/resources/application-dev.yaml
+/src/main/resources/application-pro.yaml
+/src/main/resources/application-dev.yaml
+/src/main/resources/application-pro.yaml

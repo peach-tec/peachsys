@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="hhtp://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>thymeleaf</title>
+</head>
+<body>
+<!-- 读取文本 -->
+<h1 th:text="${msg}"></h1><!-- 不转译 -->
+<h1 th:utext="${msg}"></h1><!-- 转译 -->
+<hr>
+<!-- 读取集合 -->
+<h1 th:each="user:${users}" th:text="${user}"></h1>
+</body>
+</html>
