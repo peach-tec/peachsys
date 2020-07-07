@@ -28,6 +28,12 @@
 
 
     <dependencies>
+        <!-- security -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
         <!-- druid 数据库连接池 -->
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -71,6 +77,18 @@
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>${mybatisplus.version}</version>
         </dependency>
+        <!-- mybatis-spring boot ,下面两个都可使用，但是上面这个jar包支持在properties文件中配置mybatis-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.mybatis.spring.boot</groupId>-->
+        <!--            <artifactId>mybatis-spring-boot-starter</artifactId>-->
+        <!--            <version>${mybatis.version}</version>-->
+        <!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.mybatis</groupId>-->
+        <!--            <artifactId>mybatis</artifactId>-->
+        <!--            <version>${mybatis.version}</version>-->
+        <!--        </dependency>-->
+
         <!-- JDBC -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -131,18 +149,6 @@
         <!--            <groupId>com.baidu.ueditor</groupId>-->
         <!--            <artifactId>ueditor</artifactId>-->
         <!--            <version>1.1.2</version>-->
-        <!--        </dependency>-->
-
-        <!-- mybatis-spring boot ,下面两个都可使用，但是上面这个jar包支持在properties文件中配置mybatis-->
-        <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>${mybatis.version}</version>
-        </dependency>
-        <!--        <dependency>-->
-        <!--            <groupId>org.mybatis</groupId>-->
-        <!--            <artifactId>mybatis</artifactId>-->
-        <!--            <version>${mybatis.version}</version>-->
         <!--        </dependency>-->
 
         <!-- 日志记录 -->

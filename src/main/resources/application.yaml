@@ -46,7 +46,7 @@ server:
 # mybatisplus 相关配置
 mybatis-plus:
   # 扫描xml文件
-  mapper-locations: classpath*:mapper/mybatisdemo/mapper/*.xml
+  mapper-locations: classpath:mapper/mybatisdemo/mapper/*.xml
   # 实体类
   type-aliases-package: com.dyh.peachsys.*.entity
   configuration:
