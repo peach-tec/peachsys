@@ -52,3 +52,11 @@ mybatis-plus:
   configuration:
     # 驼峰命名
     map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    # 逻辑删除的配置
+#  global-config:
+#    db-config:
+#      logic-not-delete-value: 0 # 未删除时的值
+#      logic-delete-value: 1 # 删除时的值
+#      logic-delete-field: status # 逻辑删除的字段
+

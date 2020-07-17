@@ -44,3 +44,5 @@
 2020年7月9日 shiro配置整合
 
 2020年7月13日 Springboot的异步任务、邮箱、定时任务
+
+2020年7月17日 mybatis-plus的进阶使用，文档地址：https://blog.csdn.net/weixin_45481406/article/details/107394554

@@ -18,7 +18,7 @@ import javax.servlet.MultipartConfigElement;
 @EnableScheduling //开启定时任务
 @EnableAsync // 开启异步任务
 @SpringBootApplication//引导类
-@MapperScan({"com.dyh.peachsys.peach.mapper","com.dyh.peachsys.mybatisdemo.mapper","com.dyh.peachsys.xizudemo.mapper","com.dyh.peachsys.spring_shiro_demo.mapper"})//扫描mapper文件
+@MapperScan({"com.dyh.peachsys.spring_mybatis_plus_demo.mapper","com.dyh.peachsys.peach.mapper","com.dyh.peachsys.mybatisdemo.mapper","com.dyh.peachsys.xizudemo.mapper","com.dyh.peachsys.spring_shiro_demo.mapper"})//扫描mapper文件
 //@MapperScan({"mapper1,mapper2..."})//扫描多个mapper
 public class PeachsysApplication {
 
